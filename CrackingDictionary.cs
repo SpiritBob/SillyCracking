@@ -17,6 +17,9 @@ namespace ConsoleApp3
         {
             get
             {
+                if (data == ' ')
+                    return data;
+                
                 int elementIndex = _data.IndexOf(data);
                 bool notOriginalOffSet = false;
                 while (elementIndex + offset >= _data.Length)
