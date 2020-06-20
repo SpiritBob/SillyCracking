@@ -22,6 +22,7 @@ namespace ConsoleApp3
             for (int i = - 25; i <= 25; i++)
             {
                 if (i == 0) continue;
+                
                 var sentance = splitInput[count];
                 char[] crackedSentance = new char[sentance.Length];
                 for (int j = 0; j < sentance.Length; j++)
