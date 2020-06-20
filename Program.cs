@@ -12,15 +12,17 @@ namespace ConsoleApp3
                 + "LGDTMIOFU AZGWM SALM DAF LMAFROFU, A ZWFEI GY KGWFRL, HTGHST RKTLLTR WH OF EGLMWDTL COMI YAQT FADTL YGK TXTKB KGWFR?"
                 + "LGWFRL SOQT A ZWFEI GY FGFLTFLT MG DT, ZWM O'SS QTTH DB TAK MG MIT UKGWFR AFR DAQT LWKT MG STM BGW QFGC OY O ITAK TVAEM RAMTL."
                 + "LMAB MWFTR YGK A YGKDAS AFFGWFETDTFM YGK MIT LAOFM XASTFMOFTL RAB LWDDTK DALLAEKT.";
-
+             // Haven't taken care of the white spaces, just remove the ones below if first sentance proves to be sensible
+            
             var theKey = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             var crackingArray = new CrackingArray(theKey);
 
             string[] splitInput = input.Split('?', '.');
             var foundSensibleSentance = false;
             int count = 0;
-            for (int i = - 26; i <= 26; i++)
+            for (int i = - 25; i <= 25; i++)
             {
+                if (i == 0) continue;
                 var sentance = splitInput[count];
                 char[] crackedSentance = new char[sentance.Length];
                 for (int j = 0; j < sentance.Length; j++)
