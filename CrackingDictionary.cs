@@ -34,10 +34,7 @@ namespace ConsoleApp3
                     notOriginalOffSet = true;
                 }
 
-                if (notOriginalOffSet)
-                    return _data[offset];
-                else
-                    return _data[elementIndex + offset];
+                return notOriginalOffSet ? _data[offset] : _data[elementIndex + offset];
             }
         }
     }
