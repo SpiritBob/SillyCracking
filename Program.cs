@@ -19,8 +19,9 @@ namespace ConsoleApp3
             string[] splitInput = input.Split('?', '.');
             var foundSensibleSentance = false;
             int count = 0;
-            for (int i = - 26; i <= 26; i++)
+            for (int i = - 25; i <= 25; i++)
             {
+                if (i == 0) continue;
                 var sentance = splitInput[count];
                 char[] crackedSentance = new char[sentance.Length];
                 for (int j = 0; j < sentance.Length; j++)
